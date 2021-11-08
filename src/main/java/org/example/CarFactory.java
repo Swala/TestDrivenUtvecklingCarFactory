@@ -3,10 +3,15 @@ package org.example;
 public class CarFactory {
 
     private Car car;
+    private String brand;
 
+
+    public CarFactory(String brand) {
+        this.brand = brand;
+    }
 
     public Car createNewCar(String color){
-        Car car = new Car(color);
+        car = new Car(color, brand);
 
         return car;
     }
