@@ -4,7 +4,15 @@ public class Car {
 
     String color;
     String brand;
-    //regNumber
+    String regNo;
+
+    public String getRegNo() {
+        return regNo;
+    }
+
+    public void setRegNo(String regNo) {
+        this.regNo = regNo;
+    }
 
     public Car(String color, String brand) {
         this.color = color;

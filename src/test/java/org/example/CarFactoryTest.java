@@ -15,8 +15,9 @@ public class CarFactoryTest {
 
         assertNotNull(car);
 
-        assertEquals("Red", car.color);
+        assertEquals("Red", car.getColor());
         assertEquals("Saab", car.getBrand());
+        assertEquals("ABC123", car.getRegNo());
 
     }
 
