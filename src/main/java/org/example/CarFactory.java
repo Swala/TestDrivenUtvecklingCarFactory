@@ -10,8 +10,8 @@ public class CarFactory {
         this.brand = brand;
     }
 
-    public Car createNewCar(String color){
-        car = new Car(color, brand);
+    public Car createNewCar(String color, String regNo){
+        car = new Car(color, brand, regNo);
 
         return car;
     }
