@@ -6,7 +6,7 @@ public class CarFactory {
 
 
     public Car createNewCar(){
-        //Car car = new Car();
+        Car car = new Car();
 
         return car;
     }
