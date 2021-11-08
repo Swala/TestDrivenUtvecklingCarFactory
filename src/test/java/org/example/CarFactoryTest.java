@@ -11,9 +11,11 @@ public class CarFactoryTest {
     @Test
     void test_create_car_success(){
         CarFactory carFactory = new CarFactory();
-        Car car = carFactory.createNewCar();
+        Car car = carFactory.createNewCar("Red");
 
         assertNotNull(car);
+
+        assertEquals("Red", car.color);
 
     }
 }

@@ -5,8 +5,8 @@ public class CarFactory {
     private Car car;
 
 
-    public Car createNewCar(){
-        Car car = new Car();
+    public Car createNewCar(String color){
+        Car car = new Car(color);
 
         return car;
     }
