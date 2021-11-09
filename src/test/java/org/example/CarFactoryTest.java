@@ -1,5 +1,6 @@
 package org.example;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -9,18 +10,25 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class CarFactoryTest {
 
+    CarFactory carFactory;
+    String model;
+
+    @BeforeEach
+    void setUp(){
+        carFactory = new CarFactory("Saab");
+
+    }
 
     @Test
     void test_create_car_success(){
 
-        CarFactory carFactory = new CarFactory("Saab");
-       /* Car car = carFactory.createNewCar("Red");
+        Car car = carFactory.createNewCar("Red", model="900");
 
         assertNotNull(car);
 
         assertEquals("Red", car.getColor());
         assertEquals("Saab", car.getBrand());
-        assertEquals("ABC123", car.getRegNo());*/
+        //assertEquals("ABC123", car.getRegNo());
 
     }
 
