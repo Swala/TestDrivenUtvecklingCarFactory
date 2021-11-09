@@ -2,26 +2,19 @@ package org.example;
 
 public class CarFactory {
 
-    private Car car;
-    private String brand;
+    VehicleRegistrationNumberGenerator generator = new VehicleRegistrationNumberGenerator();
 
+    private String brand;
 
     public CarFactory(String brand) {
         this.brand = brand;
     }
 
-    public Car createNewCar(String color, String regNo){
-        car = new Car(color, brand, regNo);
+    public Car createNewCar(String color){
+
+        Car car = new Car(color, this.brand, generator.nextVehicleRegistrationNumber());
 
         return car;
-    }
-
-    public Car getCar() {
-        return car;
-    }
-
-    public void setCar(Car car) {
-        this.car = car;
     }
 
 
