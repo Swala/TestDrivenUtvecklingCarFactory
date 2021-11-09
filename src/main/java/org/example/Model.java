@@ -1,51 +1,51 @@
 package org.example;
 
-public class Car {
+public class Model {
 
-    String color;
-    String brand;
-    String regNo;
     String model;
     String engine;
     Integer enginePower;
     Integer seats;
 
-
-
-    public Car(String color, String brand, String regNo, String model, String engine, Integer enginePower, Integer seats) {
-
-        this.color = color;
-        this.brand = brand;
-        this.regNo = regNo;
+    public Model(String model, String engine, Integer enginePower, Integer seats) {
         this.model = model;
         this.engine = engine;
         this.enginePower = enginePower;
         this.seats = seats;
-
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
 
     public String getModel() {
         return model;
     }
 
+    public void setModel(String model) {
+        this.model = model;
+    }
 
     public String getEngine() {
         return engine;
+    }
+
+    public void setEngine(String engine) {
+        this.engine = engine;
     }
 
     public Integer getEnginePower() {
         return enginePower;
     }
 
+    public void setEnginePower(Integer enginePower) {
+        this.enginePower = enginePower;
+    }
+
     public Integer getSeats() {
         return seats;
     }
+
+    public void setSeats(Integer seats) {
+        this.seats = seats;
+    }
+
+
 }
