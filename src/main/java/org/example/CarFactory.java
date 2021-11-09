@@ -1,7 +1,5 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class CarFactory {
 
@@ -15,11 +13,19 @@ public class CarFactory {
 
     }
 
-    public Car createNewCar(String color){
+    public Car createNewCar(String color, String model){
 
-        Car car = new Car(color, this.brand, generator.nextVehicleRegistrationNumber(), "900");
+        return switch (model) {
+            case "900" -> new Car(color, this.brand, generator.nextVehicleRegistrationNumber(), model, "Gasoline", 90, 4);
+            case "900 Turbo" -> new Car(color, this.brand, generator.nextVehicleRegistrationNumber(), model, "Gasoline", 150, 4);
+            case "93" -> new Car(color, this.brand, generator.nextVehicleRegistrationNumber(), model, "Gasoline", 110, 4);
+            case "93 aero" -> new Car(color, this.brand, generator.nextVehicleRegistrationNumber(), model, "Gasoline", 190, 4);
+            case "9-7X" -> new Car(color, this.brand, generator.nextVehicleRegistrationNumber(), model, "Diesel", 170, 6);
+            default -> throw new RuntimeException("Unknown model " + model);
+        };
 
-        return car;
+        //Car car = new Car(color, this.brand, generator.nextVehicleRegistrationNumber(), model);
+
     }
 
 

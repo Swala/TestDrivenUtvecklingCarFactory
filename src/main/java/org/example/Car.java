@@ -6,42 +6,47 @@ public class Car {
     String brand;
     String regNo;
     String model;
+    String engine;
+    Integer enginePower;
+    Integer seats;
 
 
-
-    public Car(String color, String brand, String regNo, String model) {
+    public Car(String color, String brand, String regNo, String model, String engine, Integer enginePower, Integer seats) {
         this.color = color;
         this.brand = brand;
         this.regNo = regNo;
         this.model = model;
+        this.engine = engine;
+        this.enginePower = enginePower;
+        this.seats = seats;
     }
 
     public String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public String getBrand() {
         return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
     }
 
     public String getRegNo() {
         return regNo;
     }
 
-    public void setRegNo(String regNo) {
-        this.regNo = regNo;
+
+    public String getModel() {
+        return model;
     }
 
-    public String getmodel() {
+    public String getEngine() {
+        return engine;
+    }
 
-        return model;
+    public Integer getEnginePower() {
+        return enginePower;
+    }
+
+    public Integer getSeats() {
+        return seats;
     }
 }
