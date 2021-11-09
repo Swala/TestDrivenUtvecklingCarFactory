@@ -25,7 +25,6 @@ public class VehicleRegistrationNumberGenerator {
 
         String nextRegNo = getRegNumberList().get(0);
 
-        System.out.println(nextRegNo);
         getRegNumberList().remove(0);
 
         return nextRegNo;

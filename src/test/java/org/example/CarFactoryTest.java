@@ -21,8 +21,16 @@ public class CarFactoryTest {
 
         assertEquals("Red", car.getColor());
         assertEquals("Saab", car.getBrand());
-        assertEquals("ABC123", car.getRegNo()); //how test a random string?
+        assertEquals("ABC123", car.getRegNo());
 
+    }
+
+    @Test
+    void test_add_model_success(){
+        CarFactory carFactory = new CarFactory("Saab");
+        Car car = carFactory.createNewCar("Red");
+
+        assertEquals("900", car.getmodel());
     }
 
 }
