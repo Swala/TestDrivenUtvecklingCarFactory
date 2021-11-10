@@ -14,38 +14,4 @@ public class Model {
         this.seats = seats;
     }
 
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public String getEngine() {
-        return engine;
-    }
-
-    public void setEngine(String engine) {
-        this.engine = engine;
-    }
-
-    public Integer getEnginePower() {
-        return enginePower;
-    }
-
-    public void setEnginePower(Integer enginePower) {
-        this.enginePower = enginePower;
-    }
-
-    public Integer getSeats() {
-        return seats;
-    }
-
-    public void setSeats(Integer seats) {
-        this.seats = seats;
-    }
-
-
 }

@@ -18,8 +18,7 @@ public class CarFactory {
 
     }
 
-
-    public Car createNewCar(String color, String model){
+    public Car createNewCar(String color, int modelIndex){
         /*
         return switch (model) {
             case "900" -> new Car(color, this.brand, generator.nextVehicleRegistrationNumber(), model, "Gasoline", 90, 4);
@@ -31,10 +30,13 @@ public class CarFactory {
         };*/
 
         Car car = new Car(color, this.brand, generator.nextVehicleRegistrationNumber(),
-                getModelList().get(0).model,
-                getModelList().get(0).engine,
-                getModelList().get(0).enginePower,
-                getModelList().get(0).seats);
+                getModelList().get(modelIndex).model,
+                getModelList().get(modelIndex).engine,
+                getModelList().get(modelIndex).enginePower,
+                getModelList().get(modelIndex).seats);
+
+        /*Car car = new Car(color, this.brand, generator.nextVehicleRegistrationNumber(),
+                newModel.model, newModel.engine, newModel.enginePower, newModel.seats);*/
 
         return  car;
 
@@ -50,6 +52,14 @@ public class CarFactory {
         this.modelList.add(new Model("93", "Gasoline", 110, 4));
         this.modelList.add(new Model("93 aero", "Gasoline", 190, 4));
         this.modelList.add(new Model("9-7X", "Diesel", 170, 6));
+    }
+
+    //or a create Model method?
+    public Model createModel(String model, String engine, Integer enginePower, Integer seats){
+        Model newModel = new Model(model, engine, enginePower, seats);
+
+        return newModel;
+
     }
 
 

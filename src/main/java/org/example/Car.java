@@ -1,14 +1,21 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car {
 
-    String color;
-    String brand;
-    String regNo;
-    String model;
-    String engine;
-    Integer enginePower;
-    Integer seats;
+    private String color;
+    private String brand;
+    private String regNo;
+    private String model;
+    private String engine;
+    private Integer enginePower;
+    private Integer seats;
+
+    private List<String> equipmentList = new ArrayList<>();
+
+    //Model model;
 
 
 
@@ -21,11 +28,16 @@ public class Car {
         this.engine = engine;
         this.enginePower = enginePower;
         this.seats = seats;
+        setEquipmentList();
 
     }
 
     public String getColor() {
         return color;
+    }
+
+    public String getRegNo() {
+        return regNo;
     }
 
     public String getBrand() {
@@ -47,5 +59,16 @@ public class Car {
 
     public Integer getSeats() {
         return seats;
+    }
+
+    public void setEquipmentList(){
+        this.equipmentList.add("Xenon lights");
+        this.equipmentList.add("Light metal caps 24in");
+        this.equipmentList.add("Backseat Heating");
+
+    }
+
+    public List<String> getEquipmentList(){
+        return equipmentList;
     }
 }
